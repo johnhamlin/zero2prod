@@ -5,6 +5,7 @@ use zero2prod::startup::run;
 
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
+    dotenv::dotenv().ok();
     std::env::set_var("RUST_LOG", "debug");
     env_logger::init();
 
